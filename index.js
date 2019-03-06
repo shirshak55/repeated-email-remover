@@ -77,9 +77,7 @@ if (!absFilePath) {
         console.log(pth)
         fs.statSync(pth).isFile()
         absFilePath = pth
-    } catch (e) {
-        console.log(e)
-    }
+    } catch (e) {}
 }
 
 if (!absFilePath) {
