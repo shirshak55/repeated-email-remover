@@ -13,13 +13,13 @@
 1. Install using yarn (preferred)
 
 ```bash
-    yarn global add repeated-line-remover
+    yarn global add remove-repeated-emails
 ```
 
 2. Or Install using node_modules
 
 ```
-    npm i g repeated-line-remover
+    npm i g remove-repeated-emails
 ```
 
 # Todo

@@ -1,10 +1,10 @@
 {
     "name": "remove-repeated-emails",
-    "version": "1.0.0",
+    "version": "2.0.1",
     "main": "index.js",
     "license": "MIT",
     "bin": {
-        "remove-repeated-lines": "./index.js"
+        "remove-repeated-emails": "./index.js"
     },
     "preferGlobal": true,
     "dependencies": {
