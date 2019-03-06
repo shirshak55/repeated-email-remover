@@ -1,10 +1,10 @@
 {
-    "name": "repeated-line-remover",
+    "name": "remove-repeated-lines",
     "version": "1.0.1",
     "main": "index.js",
     "license": "MIT",
     "bin": {
-        "repeated-line-remover": "./index.js"
+        "remove-repeated-lines": "./index.js"
     },
     "preferGlobal": true,
     "dependencies": {
