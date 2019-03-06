@@ -6,6 +6,7 @@
     "bin": {
         "repeated-line-remover": "./index.js"
     },
+    "preferGlobal": true,
     "dependencies": {
         "meow": "^5.0.0"
     }
