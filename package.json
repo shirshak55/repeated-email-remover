@@ -1,9 +1,12 @@
 {
-  "name": "repeated_lines_remover",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "meow": "^5.0.0"
-  }
+    "name": "repeated_lines_remover",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "bin": {
+        "repeated-line-remover": "./index.js"
+    },
+    "dependencies": {
+        "meow": "^5.0.0"
+    }
 }
