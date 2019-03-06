@@ -12,13 +12,21 @@
 
 1. Install using yarn (preferred)
 
+```bash
+    yarn global add repeated-line-remover
+```
+
 2. Or Install using node_modules
+
+```
+    npm i g repeated-line-remover
+```
 
 # Todo
 
 # PR
 
-welcome
+Welcome
 
 Thanks,
 Shirshak
