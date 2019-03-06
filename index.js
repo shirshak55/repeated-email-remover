@@ -35,9 +35,19 @@ if (cli.input.length == 0) {
 
 const filePath = cli.input[0]
 
-function dupCounter(original) {
+function extractEmails(text) {
+    if (!text) return null
+    return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi)
+}
+
+function dupCounter(o) {
     var compressed = []
-    // make a copy of the input array
+
+    const original = o.map(v => {
+        const a = extractEmails(v)
+        if (a && a.length) return a[0]
+        return ''
+    })
     var copy = original.slice(0)
 
     // first loop goes over every element
@@ -55,17 +65,13 @@ function dupCounter(original) {
 
         if (myCount > 0) {
             var a = new Object()
-            a.value = original[i]
+            a.value = o[i]
             a.count = myCount
             compressed.push(a)
         }
     }
 
     return compressed
-}
-
-function extractEmails(text) {
-    return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi)
 }
 
 let absFilePath = ''
@@ -78,7 +84,6 @@ if (!absFilePath) {
     try {
         const cwd = process.cwd()
         const pth = path.join(cwd, filePath)
-        console.log(pth)
         fs.statSync(pth).isFile()
         absFilePath = pth
     } catch (e) {}
@@ -92,11 +97,10 @@ let lines = fs
     .readFileSync(absFilePath)
     .toString()
     .split(/[\r\n]+/g)
-    .map(v => extractEmails(v))
 
 const linesWithCounts = dupCounter(lines)
     .filter(v => v.count === 1)
     .map(v => v.value)
 
-console.log('🌈  Removing Duplicate Emails 🌈 ')
+console.log('🌈  Removing Duplicates 🌈 ')
 fs.writeFileSync(filePath, linesWithCounts.join('\n'))
