@@ -1,6 +1,6 @@
 {
     "name": "repeated_lines_remover",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "index.js",
     "license": "MIT",
     "bin": {
