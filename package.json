@@ -1,6 +1,6 @@
 {
-    "name": "remove-repeated-lines",
-    "version": "1.0.2",
+    "name": "remove-repeated-emails",
+    "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
     "bin": {
